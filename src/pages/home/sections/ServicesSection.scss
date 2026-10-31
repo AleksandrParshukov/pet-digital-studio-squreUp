@@ -1,0 +1,55 @@
+.idx-services {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    padding: 50px;
+    border-block: var(--base-border);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &:not(:last-child) {
+      border-right: var(--base-border);
+    }
+  }
+
+  &__icon {
+    width: max-content;
+    aspect-ratio: 1;
+    background:
+      linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%),
+      linear-gradient(229.29deg, rgba(158, 255, 0, 0.8) -68.25%, rgba(158, 255, 0, 0) 32.16%);
+    padding: 24px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+
+    img {
+      width: 40px;
+      height: auto;
+      aspect-ratio: 1;
+    }
+  }
+
+  &__name {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33333;
+    letter-spacing: -0.01em;
+    color: var(--grey-90);
+    margin-block: 20px 80px;
+  }
+
+  &__link {
+    width: 100%;
+    margin-top: auto;
+  }
+}

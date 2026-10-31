@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Zapier",
+    "logo": "zapier.svg"
+  },
+  {
+    "id": 2,
+    "name": "Spotify",
+    "logo": "spotify.svg"
+  },
+  {
+    "id": 3,
+    "name": "Zoom",
+    "logo": "zoom.svg"
+  },
+  {
+    "id": 4,
+    "name": "Slack",
+    "logo": "slack.svg"
+  },
+  {
+    "id": 5,
+    "name": "Amazon",
+    "logo": "amazon.svg"
+  },
+  {
+    "id": 6,
+    "name": "Adobe",
+    "logo": "adobe.svg"
+  }
+]

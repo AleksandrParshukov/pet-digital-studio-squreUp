@@ -1,0 +1,21 @@
+.top-block {
+  height: 336px;
+  background-image: url('@/assets/images/bg-pattern.png'), var(--bg-image);
+  background-repeat: repeat, no-repeat;
+  background-size: auto, cover;
+  background-position: center, center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  &__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.33333;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: var(--grey-90);
+  }
+}

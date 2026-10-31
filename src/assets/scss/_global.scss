@@ -1,0 +1,149 @@
+@use './breakpoints.scss' as *;
+
+:root {
+  --absolute-white: #fff;
+  --absolute-black: #000;
+  --green-50: #9eff00;
+  --green-60: #b1ff33;
+  --green-70: #c5ff66;
+  --green-80: #d8ff99;
+  --green-90: #ecffcc;
+  --green-95: #f5ffe5;
+  --green-97: #f9fff0;
+  --green-99: #fdfffa;
+  --grey-10: #1a1a1a;
+  --grey-15: #262626;
+  --grey-20: #333;
+  --grey-30: #4c4c4d;
+  --grey-35: #59595a;
+  --grey-40: #656567;
+  --grey-60: #98989a;
+  --grey-90: #e6e6e6;
+
+  --header-height: 100px;
+  --base-border: 1px solid var(--grey-15);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+
+  &.modal-open {
+    overflow: hidden;
+  }
+}
+
+html.light-theme {
+  --color-text: rgb(3 3 3);
+  --color-primary: rgb(247 247 251);
+  /* --accent-primary: rgb(61 26 143);
+  --accent-secondary: rgb(14 31 109); */
+}
+
+body {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--absolute-white);
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  background-color: var(--grey-10);
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  overflow-x: clip;
+}
+
+main {
+  flex-grow: 1;
+}
+
+header,
+footer,
+section {
+  padding-inline: 80px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+a,
+input {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+a {
+  color: var(--color-black);
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+ol,
+dl {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+label[for]:not([for='']) {
+  cursor: pointer;
+}
+
+.desc {
+  text-wrap: pretty;
+}
+
+.desc ul,
+.desc ol,
+.desc dl {
+  list-style: revert;
+  padding: revert;
+  margin: revert;
+}
+
+.desc p + p {
+  margin-top: 1em;
+}
+
+@media (max-width: $lg) {
+  :root {
+    --header-height: 85px;
+  }
+}
+
+@media (max-width: $ssm) {
+  :root {
+    --header-height: 106px;
+  }
+}

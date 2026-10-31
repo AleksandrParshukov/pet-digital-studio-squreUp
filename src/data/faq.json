@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "question": "What services does SquareUp provide?",
+    "answer": "SquareUp offers a range of services including design, engineering, and project management. We specialize in user experience design, web development, mobile app development, custom software development, branding and identity, and more."
+  },
+  {
+    "id": 2,
+    "question": "Do you offer ongoing support and maintenance after the project is completed?",
+    "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam facilis odit assumenda quia fuga distinctio, sunt soluta! Odio fugit cumque voluptatum nam repellendus, rerum ipsa ex, corrupti doloremque quisquam laudantium quos tenetur earum error!"
+  },
+  {
+    "id": 3,
+    "question": "Can you work with existing design or development frameworks?",
+    "answer": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt vel ea sed iure mollitia quibusdam, magni expedita culpa atque, recusandae aliquam id est."
+  },
+  {
+    "id": 4,
+    "question": "How can SquareUp help my business?",
+    "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odit quod inventore."
+  },
+  {
+    "id": 5,
+    "question": "How involved will I be in the project development process?",
+    "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea odio eos aperiam dolorum earum deleniti."
+  },
+  {
+    "id": 6,
+    "question": "What industries does SquareUp work with?",
+    "answer": "Lorem ipsum dolor, sit amet consectetur adipisicing elit."
+  },
+  {
+    "id": 7,
+    "question": "Can you help with website or app maintenance and updates?",
+    "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aspernatur delectus error similique excepturi voluptatibus, amet praesentium asperiores temporibus assumenda maxime quia minima. Vero voluptates quam repellendus. Tenetur, omnis magnam tempore sunt similique quisquam molestiae quod ipsam accusantium voluptatibus numquam?"
+  },
+  {
+    "id": 8,
+    "question": "How long does it take to complete a project with SquareUp?",
+    "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor distinctio tempore nostrum deserunt at illum aliquid nobis ratione. Laboriosam voluptatum consequatur quae nisi reprehenderit, numquam modi!"
+  }
+]

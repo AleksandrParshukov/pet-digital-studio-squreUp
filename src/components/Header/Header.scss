@@ -1,0 +1,33 @@
+@import url('./main-nav.scss');
+
+.header {
+  height: var(--header-height);
+  background-color: var(--grey-10);
+  border-bottom: var(--base-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .wrapper {
+    height: 100%;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 36px;
+  }
+
+  &__logo {
+    color: var(--absolute-white);
+    width: 177px;
+    height: 60px;
+
+    &:hover {
+      color: var(--green-90);
+    }
+  }
+
+  &__callback {
+    padding: 15px 23px;
+  }
+}

@@ -1,0 +1,122 @@
+.footer {
+  border-top: var(--base-border);
+
+  .wrapper {
+    border: none;
+  }
+
+  &__top {
+    padding-block: 50px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: clamp(16px, 1.8vw, 36px);
+  }
+
+  &__logo {
+    color: var(--absolute-white);
+    width: 177px;
+    height: 60px;
+
+    &:hover {
+      color: var(--green-90);
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: clamp(16px, 1.5vw, 30px);
+  }
+
+  &__menu-item {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--grey-90);
+
+    &:hover {
+      color: var(--green-80);
+    }
+  }
+
+  &__social {
+    padding: 12px 12px 12px 22px;
+    border: var(--base-border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    justify-self: end;
+  }
+
+  &__social-caption {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--grey-90);
+    margin-right: 6px;
+  }
+
+  &__social-link {
+    color: var(--green-50);
+    width: max-content;
+    aspect-ratio: 1;
+    padding: clamp(12px, 1vw, 20px);
+    background:
+      linear-gradient(180deg, #242424 0%, transparent 100%) padding-box,
+      linear-gradient(229.29deg, rgba(158, 255, 0, 0.8) -68.25%, rgba(158, 255, 0, 0) 32.16%) padding-box,
+      linear-gradient(180deg, #2e2e2e 0%, transparent 100%) border-box;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    display: grid;
+    place-content: center;
+
+    svg {
+      width: 24px;
+      height: auto;
+      aspect-ratio: 1;
+    }
+
+    &:hover {
+      color: var(--green-80);
+    }
+  }
+
+  &__bottom {
+    padding-block: 50px;
+    border-top: var(--base-border);
+    display: flex;
+    justify-content: space-between;
+    gap: 36px;
+  }
+
+  &__contacts {
+    display: flex;
+    gap: clamp(16px, 1.5vw, 30px);
+  }
+
+  &__contacts-link {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--grey-90);
+    padding-bottom: 16px;
+    border-bottom: var(--base-border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+      color: var(--green-80);
+      border-color: var(--green-50);
+    }
+  }
+
+  &__copyright {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--grey-60);
+  }
+}

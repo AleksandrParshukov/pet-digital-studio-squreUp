@@ -1,0 +1,187 @@
+@use './breakpoints.scss' as *;
+
+.wrapper {
+  width: 100%;
+  max-width: 1596px;
+  margin-inline: auto;
+  border-inline: var(--base-border);
+}
+
+.h1 {
+  font-weight: 600;
+  font-size: 68px;
+  text-align: center;
+  color: var(--absolute-white);
+}
+
+.h2 {
+  font-weight: 600;
+  font-size: 48px;
+  text-align: center;
+  color: var(--absolute-white);
+}
+
+.btn {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: center;
+  width: max-content;
+  padding: 18px 28px;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  display: block;
+
+  color: var(--color);
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+
+  &:hover,
+  &:focus {
+    color: var(--hover-color);
+    background-color: var(--hover-bg-color);
+    border-color: var(--hover-border-color);
+  }
+
+  &:active {
+    color: var(--active-color);
+    background-color: var(--active-bg-color);
+    border-color: var(--active-border-color);
+  }
+}
+
+.btn-primary {
+  --color: var(--grey-15);
+  --bg-color: var(--green-50);
+  --border-color: var(--green-50);
+  --hover-color: var(--absolute-black);
+  --hover-bg-color: var(--green-80);
+  --hover-border-color: var(--green-80);
+  --active-color: var(--grey-15);
+  --active-bg-color: var(--green-60);
+  --active-border-color: var(--green-60);
+}
+
+.btn-secondary {
+  --color: var(--absolute-white);
+  --bg-color: var(--grey-15);
+  --border-color: var(--grey-15);
+  --hover-color: var(--absolute-black);
+  --hover-bg-color: var(--green-80);
+  --hover-border-color: var(--green-80);
+  --active-color: var(--grey-15);
+  --active-bg-color: var(--green-60);
+  --active-border-color: var(--green-60);
+}
+
+.btn-outline-secondary {
+  --color: var(--absolute-white);
+  backdrop-filter: blur(12px);
+  --bg-color: rgba(36, 36, 36, 0.2);
+  --border-color: var(--grey-20);
+  --hover-color: var(--absolute-black);
+  --hover-bg-color: var(--green-80);
+  --hover-border-color: var(--green-80);
+  --active-color: var(--grey-15);
+  --active-bg-color: var(--green-60);
+  --active-border-color: var(--green-60);
+}
+
+.loader {
+  margin: 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 3px solid #000000;
+  border-right-color: transparent;
+  border-radius: 100vw;
+  animation: spin infinite 1s linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: $md) {
+  .to-md {
+    display: none !important;
+  }
+}
+
+@media (max-width: $md) {
+  .from-md {
+    display: none !important;
+  }
+
+  .wrapper {
+    padding-inline: 24px;
+  }
+
+  .h1 {
+    font-size: 48px;
+  }
+}
+
+@media (min-width: $ssm) {
+  .to-ssm {
+    display: none !important;
+  }
+}
+
+@media (max-width: $ssm) {
+  .from-ssm {
+    display: none !important;
+  }
+
+  .section {
+    padding-block: 60px;
+  }
+}
+
+@media (min-width: $sm) {
+  .to-sm {
+    display: none !important;
+  }
+}
+
+@media (max-width: $sm) {
+  .from-sm {
+    display: none !important;
+  }
+
+  .h1 {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: $xs) {
+  .to-xs {
+    display: none !important;
+  }
+}
+
+@media (max-width: $xs) {
+  .from-xs {
+    display: none !important;
+  }
+
+  .section {
+    padding-block: 50px;
+  }
+
+  .wrapper {
+    padding-inline: 16px;
+  }
+}
