@@ -1,12 +1,15 @@
 import { NavLink } from 'react-router';
 import { useLocation } from 'react-router';
-import { useLayoutEffect, useRef } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import './Header.scss';
-import menu from '@/data/menu.json';
+import { menu } from '@/data/menu';
 
 export function Header() {
   const location = useLocation();
   const nav_list_ref = useRef<HTMLUListElement>(null);
+  const [is_menu_open, set_is_menu_open] = useState(false);
+  const header_ref = useRef<HTMLElement>(null);
+  const menu_ref = useRef<HTMLElement>(null);
 
   useLayoutEffect(() => {
     const nav_list = nav_list_ref.current;
@@ -43,8 +46,26 @@ export function Header() {
     };
   }, [location.pathname]);
 
+  useEffect(() => {
+    if (!is_menu_open) return;
+
+    const handle_click_outside = (event: MouseEvent) => {
+      const target = event.target as Node;
+
+      if (!header_ref.current?.contains(target) && !menu_ref.current?.contains(target)) {
+        set_is_menu_open(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handle_click_outside);
+
+    return () => {
+      document.removeEventListener('mousedown', handle_click_outside);
+    };
+  }, [is_menu_open]);
+
   return (
-    <header className="header">
+    <header className="header" ref={header_ref}>
       <div className="wrapper">
         <NavLink to="/" className="header__logo">
           <svg width="178" height="60" viewBox="0 0 178 60" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -91,7 +112,16 @@ export function Header() {
           </svg>
         </NavLink>
 
-        <nav className="main-nav">
+        <button
+          type="button"
+          className="header__toggle to-ssm js_menu_open"
+          onClick={() => set_is_menu_open(!is_menu_open)}>
+          <div className="burger-menu">
+            <div className={`bar${is_menu_open ? ' animate' : ''}`}></div>
+          </div>
+        </button>
+
+        <nav className={`main-nav${is_menu_open ? ' open' : ''}`} ref={menu_ref}>
           <ul className="main-nav__list" ref={nav_list_ref}>
             <li className="main-nav__indicator" aria-hidden="true" />
 
@@ -103,9 +133,13 @@ export function Header() {
               </li>
             ))}
           </ul>
+
+          <button className="header__callback btn btn-primary to-ssm" type="button">
+            Contact Us
+          </button>
         </nav>
 
-        <button className="header__callback btn btn-primary" type="button">
+        <button className="header__callback btn btn-primary from-ssm" type="button">
           Contact Us
         </button>
       </div>

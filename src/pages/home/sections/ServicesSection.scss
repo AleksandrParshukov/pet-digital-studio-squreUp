@@ -1,3 +1,5 @@
+@use '@/assets/scss/breakpoints.scss' as *;
+
 .idx-services {
   &__list {
     display: flex;
@@ -51,5 +53,88 @@
   &__link {
     width: 100%;
     margin-top: auto;
+  }
+}
+
+@media (max-width: $lg) {
+  .idx-services {
+    &__item {
+      padding: 40px;
+    }
+
+    &__icon {
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+
+      img {
+        width: 30px;
+      }
+    }
+
+    &__name {
+      font-size: 24px;
+    }
+
+    &__desc {
+      font-size: 16px;
+      margin-block: 14px 60px;
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .idx-services {
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      grid-template-rows: repeat(3, min-content);
+      align-items: center;
+      gap: 24px 14px;
+
+      &:not(:last-child) {
+        border-right: none;
+        border-bottom: var(--base-border);
+      }
+    }
+
+    &__icon {
+      margin: 0;
+    }
+
+    &__desc,
+    &__link {
+      margin: 0;
+      grid-column: span 2;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .idx-services {
+    &__item {
+      padding: 30px;
+    }
+
+    &__icon {
+      padding: 16px;
+      border-radius: 6px;
+
+      img {
+        width: 26px;
+      }
+    }
+
+    &__name {
+      font-size: 20px;
+    }
+
+    &__desc {
+      font-size: 14px;
+    }
   }
 }

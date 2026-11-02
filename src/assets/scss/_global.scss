@@ -140,10 +140,22 @@ label[for]:not([for='']) {
   :root {
     --header-height: 85px;
   }
+
+  header,
+  footer,
+  section {
+    padding-inline: 50px;
+  }
 }
 
 @media (max-width: $ssm) {
   :root {
     --header-height: 106px;
+  }
+
+  header,
+  footer,
+  section {
+    padding-inline: 16px;
   }
 }

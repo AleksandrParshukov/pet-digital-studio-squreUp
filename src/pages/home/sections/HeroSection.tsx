@@ -10,9 +10,7 @@ export function HeroSection() {
           <br /> that will Work
         </h1>
         <p className="hero__about">
-            For
-            <span>Startups</span>,<span>Enterprise leaders</span>,<span>Media & Publishers</span> and
-            <span>Social Good</span>
+            For <span>Startups</span>, <span>Enterprise leaders</span>, <span>Media & Publishers</span> and <span>Social Good</span>
         </p>
 
         <div className="hero__controls">

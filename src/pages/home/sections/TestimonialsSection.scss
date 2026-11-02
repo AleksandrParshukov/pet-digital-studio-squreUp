@@ -1,3 +1,5 @@
+@use '@/assets/scss/breakpoints.scss' as *;
+
 .idx-testimonials {
   &__list {
     border-top: var(--base-border);
@@ -6,7 +8,7 @@
   }
 
   &__item {
-    padding: clamp(60px, 5.2vw, 100px) clamp(50px, 4.1vw, 80px);
+    padding: clamp(80px, 5.2vw, 100px) clamp(60px, 4.1vw, 80px);
     border-bottom: var(--base-border);
     display: flex;
     flex-direction: column;
@@ -75,5 +77,85 @@
   &__link {
     width: fit-content;
     padding-inline: 20px;
+  }
+}
+
+@media (max-width: $lg) {
+  .idx-testimonials {
+    &__item {
+      padding: clamp(60px, 5.2vw, 80px) clamp(40px, 4.1vw, 60px);
+    }
+
+    &__caption {
+      font-size: 20px;
+    }
+
+    &__text {
+      font-size: 16px;
+      margin-block: 20px 30px;
+    }
+
+    &__author {
+      padding: 14px;
+      border-radius: 6px;
+      gap: 12px;
+    }
+
+    &__author-avatar {
+      width: 50px;
+      border-radius: 6px;
+    }
+
+    &__author-name {
+      font-size: 16px;
+    }
+
+    &__author-position {
+      font-size: 14px;
+    }
+
+    &__link {
+      padding-inline: 16px;
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .idx-testimonials {
+    &__list {
+      grid-template-columns: 100%;
+    }
+
+    &__item {
+      padding: 40px 24px;
+
+      &:not(:nth-child(2n + 2)) {
+        border-right: none;
+      }
+    }
+
+    &__caption {
+      font-size: 18px;
+    }
+
+    &__text {
+      font-size: 14px;
+      margin-block: 20px 24px;
+    }
+
+    &__author {
+      padding: 14px;
+      gap: 10px;
+    }
+
+    &__author-avatar {
+      width: 40px;
+    }
+
+    &__author-name {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.5;
+    }
   }
 }

@@ -1,3 +1,5 @@
+@use '@/assets/scss/breakpoints.scss' as *;
+
 .faq {
   .wrapper {
     display: flex;
@@ -21,7 +23,7 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px 30px;
+    column-gap: 30px;
     cursor: pointer;
 
     &:first-child {
@@ -67,7 +69,7 @@
     background:
       linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%) padding-box,
       linear-gradient(180deg, #2e2e2e 0%, transparent 100%) border-box;
-      border: 1px solid transparent;
+    border: 1px solid transparent;
     border-radius: 12px;
     display: grid;
     place-content: center;
@@ -94,5 +96,74 @@
     font-size: 18px;
     line-height: 1.5;
     color: var(--grey-90);
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: $lg) {
+  .faq {
+    .wrapper {
+      display: flex;
+    }
+
+    &__list {
+      padding-block: 60px;
+    }
+
+    &__item {
+      padding: 24px 40px;
+      column-gap: 24px;
+    }
+
+    &__num {
+      font-size: 24px;
+      width: 62px;
+      border-radius: 8px;
+    }
+
+    &__question {
+      font-size: 18px;
+    }
+
+    &__answer-text {
+      font-size: 16px;
+      padding-top: 16px;
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .faq {
+    .wrapper {
+      flex-direction: column;
+    }
+
+    &__list {
+      padding-block: 0;
+
+      &:not(:last-child) {
+        border-right: none;
+      }
+    }
+
+    &__item {
+      padding: 24px;
+      column-gap: 20px;
+    }
+
+    &__num {
+      font-size: 20px;
+      width: 52px;
+      border-radius: 6px;
+    }
+
+    &__question {
+      font-size: 16px;
+    }
+
+    &__answer-text {
+      font-size: 14px;
+      padding-top: 24px;
+    }
   }
 }

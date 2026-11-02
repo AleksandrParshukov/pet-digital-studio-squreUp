@@ -9,14 +9,14 @@ export function CallbackSection() {
       <div className="wrapper">
         <form className="callback__form form" action="">
           <div className="form__row">
-            <div className="form__group">
+            <div className="form__group small">
               <label htmlFor="fname" className="form__label">
                 Full Name
               </label>
               <input className="form__input" type="text" name="fname" id="fname" placeholder="Type here" />
             </div>
 
-            <div className="form__group">
+            <div className="form__group small">
               <label htmlFor="email" className="form__label">
                 Email
               </label>
@@ -49,8 +49,13 @@ export function CallbackSection() {
           <PriceRange />
 
           <div className="form__group small">
-            <label htmlFor="message"></label>
-            <textarea className="form__input textarea" name="message" id="message" placeholder="Type here" rows={2}></textarea>
+            <label className="form__label" htmlFor="message">Your Message</label>
+            <textarea
+              className="form__input textarea"
+              name="message"
+              id="message"
+              placeholder="Type here"
+              rows={2}></textarea>
           </div>
 
           <button className="btn btn-primary" type="submit">
@@ -96,11 +101,15 @@ function PriceRange() {
               {children}
             </div>
           )}
-          renderThumb={({ props, value }) => (
-            <div {...props} className="form__range-thumb">
-              <span className="form__range-value">{value.toLocaleString('en-US')}$</span>
-            </div>
-          )}
+          renderThumb={({ props, value }) => {
+            const { key, ...thumb_props } = props;
+
+            return (
+              <div key={key} {...thumb_props} className="form__range-thumb">
+                <span className="form__range-value">{value.toLocaleString('en-US')}$</span>
+              </div>
+            );
+          }}
         />
         <input type="hidden" name="min_price" value={values[0]} />
         <input type="hidden" name="max_price" value={values[1]} />

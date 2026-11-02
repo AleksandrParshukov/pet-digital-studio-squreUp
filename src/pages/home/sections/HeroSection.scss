@@ -1,3 +1,5 @@
+@use '@/assets/scss/breakpoints.scss' as *;
+
 .hero {
   .wrapper {
     height: 796px;
@@ -43,5 +45,59 @@
   &__controls {
     display: flex;
     gap: 16px;
+  }
+}
+
+@media (max-width: $lg) {
+  .hero {
+    .wrapper {
+      height: clamp(566px, 48vw, 691px);
+    }
+
+    &__about {
+      font-size: 18px;
+      max-width: 700px;
+      padding: 18px 30px;
+      margin-block: 30px 40px;
+      border-radius: 8px;
+
+      span {
+        padding: 8px 10px;
+        border-radius: 6px;
+      }
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .hero {
+    padding-inline: 0;
+
+    .wrapper {
+      height: 566px;
+      padding: 80px 16px;
+      background-size:
+        auto 50%,
+        auto;
+    }
+
+    &__about {
+      font-size: 16px;
+      text-align: center;
+      padding: 18px 20px;
+      display: inline;
+
+      span {
+        color: inherit;
+        padding: 0;
+        background-color: transparent;
+        display: inline;
+      }
+    }
+
+    &__controls {
+      display: flex;
+      gap: 16px;
+    }
   }
 }

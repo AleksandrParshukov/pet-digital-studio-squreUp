@@ -114,6 +114,21 @@
   }
 }
 
+@media (max-width: $lg) {
+  .h1 {
+    font-size: 48px;
+  }
+
+  .h2 {
+    font-size: 38px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+}
+
 @media (min-width: $md) {
   .to-md {
     display: none !important;
@@ -123,10 +138,6 @@
 @media (max-width: $md) {
   .from-md {
     display: none !important;
-  }
-
-  .wrapper {
-    padding-inline: 24px;
   }
 
   .h1 {
@@ -145,8 +156,12 @@
     display: none !important;
   }
 
-  .section {
-    padding-block: 60px;
+  .h1 {
+    font-size: 34px;
+  }
+
+  .h2 {
+    font-size: 28px;
   }
 }
 
@@ -175,13 +190,5 @@
 @media (max-width: $xs) {
   .from-xs {
     display: none !important;
-  }
-
-  .section {
-    padding-block: 50px;
-  }
-
-  .wrapper {
-    padding-inline: 16px;
   }
 }

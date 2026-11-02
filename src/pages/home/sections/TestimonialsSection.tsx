@@ -20,7 +20,7 @@ export function TestimonialsSection() {
     <section className="idx-testimonials">
       <TopBlock
         title="What our Clients say About us"
-        description="At SquareUp, we take pride in delivering exceptional digital products and services that drive success for our clients. Here's what some of our satisfied clients have to say about their experience working with us"
+        description="At SquareUp, we take pride in delivering exceptional digital products and services that drive success for our clients. Here's what some of our satisfied clients have to say about their experience working with&nbsp;us"
         background={top_bg}
       />
 
@@ -30,17 +30,15 @@ export function TestimonialsSection() {
             <li className="idx-testimonials__item" key={item.id}>
               <p className="idx-testimonials__caption">{item.caption}</p>
               <p className="idx-testimonials__text">{item.text}</p>
-              <div className="idx-testimonials__author">
+              <a href="#" className="idx-testimonials__author">
                 <img className="idx-testimonials__author-avatar" src={avatar_map[item.author_avatar]} alt="" />
                 <div className="idx-testimonials__author-info">
                   <p className="idx-testimonials__author-name">{item.author_name}</p>
                   <p className="idx-testimonials__author-position">{item.author_position}</p>
                 </div>
 
-                <a href="#" className="idx-testimonials__link btn btn-secondary">
-                  Open Website
-                </a>
-              </div>
+                <p className="idx-testimonials__link btn btn-secondary from-xs">Open Website</p>
+              </a>
             </li>
           ))}
         </ul>

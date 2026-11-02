@@ -1,7 +1,9 @@
+@use '@/assets/scss/breakpoints.scss' as *;
+
 .form {
   max-width: 1060px;
   margin-inline: auto;
-  padding: clamp(50px, 4.1vw, 80px);
+  padding: clamp(60px, 4.1vw, 80px);
   border-inline: var(--base-border);
   display: flex;
   flex-direction: column;
@@ -19,6 +21,10 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+
+    &.small {
+      padding-block: 24px;
+    }
   }
 
   &__label {
@@ -151,5 +157,110 @@
   .btn {
     padding: 18px 44px;
     margin-inline: auto;
+  }
+}
+
+@media (max-width: $lg) {
+  .form {
+    max-width: 850px;
+    padding: clamp(40px, 4.1vw, 60px);
+    gap: 30px;
+
+    &__row {
+      gap: 30px;
+    }
+
+    &__group {
+      padding: 30px;
+
+      &.small {
+        padding-block: 20px;
+      }
+    }
+
+    &__label {
+      font-size: 18px;
+    }
+
+    &__input {
+      font-size: 16px;
+      margin-top: 16px;
+    }
+
+    &__list {
+      margin-top: 30px;
+      gap: 24px 20px;
+    }
+
+    &__checkbox {
+      label {
+        font-size: 16px;
+        gap: 8px;
+      }
+    }
+
+    &__note {
+      font-size: 16px;
+    }
+
+    &__range-thumb {
+      width: 20px;
+      border: 4px solid var(--grey-30);
+    }
+
+    &__range-value {
+      font-size: 14px;
+      top: calc(100% + 8px);
+    }
+
+    .btn {
+      padding: 14px 36px;
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .form {
+    padding: 24px;
+
+    &__row {
+      flex-direction: column;
+    }
+
+    &__group {
+      &.small {
+        padding: 18px 24px;
+      }
+    }
+
+    &__label {
+      font-size: 16px;
+    }
+
+    &__input {
+      margin-top: 14px;
+    }
+
+    &__list {
+      grid-template-columns: 100%;
+      gap: 20px;
+    }
+
+    &__note {
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    &__range-wrap {
+      padding: 20px 3px;
+    }
+
+    &__range {
+      height: 2px;
+    }
+
+    .btn {
+      width: 100%;
+    }
   }
 }

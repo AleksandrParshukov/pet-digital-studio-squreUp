@@ -1,3 +1,5 @@
+@use '@/assets/scss/breakpoints.scss' as *;
+
 .idx-whyus {
   &__list {
     border-top: var(--base-border);
@@ -6,7 +8,7 @@
   }
 
   &__item {
-    padding: clamp(50px, 4.1vw, 80px);
+    padding: clamp(60px, 4.1vw, 80px);
     border-bottom: var(--base-border);
     display: grid;
     grid-template-columns: max-content 1fr;
@@ -51,5 +53,62 @@
     letter-spacing: -0.01em;
     color: var(--grey-90);
     grid-column: span 2;
+  }
+}
+
+@media (max-width: $lg) {
+  .idx-whyus {
+    &__item {
+      padding: clamp(40px, 4.1vw, 60px);
+      border-bottom: var(--base-border);
+      gap: 30px 14px;
+    }
+
+    &__icon {
+      padding: 20px;
+      border-radius: 8px;
+
+      img {
+        width: 30px;
+      }
+    }
+
+    &__name {
+      font-size: 20px;
+    }
+
+    &__desc {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: $sm) {
+  .idx-whyus {
+    &__list {
+      grid-template-columns: 100%;
+    }
+
+    &__item {
+      padding: 40px 30px;
+      gap: 24px 14px;
+
+      &:not(:nth-child(2n + 2)) {
+        border-right: none;
+      }
+    }
+
+    &__icon {
+      padding: 16px;
+      border-radius: 6px;
+
+      img {
+        width: 26px;
+      }
+    }
+
+    &__desc {
+      font-size: 14px;
+    }
   }
 }

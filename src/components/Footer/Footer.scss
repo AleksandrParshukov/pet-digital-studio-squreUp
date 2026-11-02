@@ -1,3 +1,5 @@
+@use '@/assets/scss/breakpoints.scss' as *;
+
 .footer {
   border-top: var(--base-border);
 
@@ -14,9 +16,14 @@
   }
 
   &__logo {
-    color: var(--absolute-white);
-    width: 177px;
+    width: auto;
     height: 60px;
+    aspect-ratio: 177 / 60;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
 
     &:hover {
       color: var(--green-90);
@@ -118,5 +125,142 @@
     font-size: 18px;
     line-height: 1.5;
     color: var(--grey-60);
+  }
+}
+
+@media (max-width: $lg) {
+  .footer {
+    &__top {
+      padding-block: 40px;
+      gap: clamp(16px, 1.6vw, 24px);
+    }
+
+    &__logo {
+      height: 40px;
+    }
+
+    &__menu {
+      gap: clamp(12px, 1.1vw, 16px);
+    }
+
+    &__menu-item {
+      font-size: clamp(14px, 1.1vw, 16px);
+    }
+
+    &__social {
+      padding: 8px 8px 8px 16px;
+      border-radius: 8px;
+      gap: 10px;
+    }
+
+    &__social-caption {
+      font-size: clamp(14px, 1.1vw, 16px);
+      margin-right: 10px;
+    }
+
+    &__social-link {
+      padding: clamp(8px, 0.9vw, 14px);
+      border-radius: 8px;
+
+      svg {
+        width: 20px;
+      }
+    }
+
+    &__bottom {
+      padding-block: 40px;
+      gap: 24px;
+    }
+
+    &__contacts {
+      gap: 24px;
+    }
+
+    &__contacts-link {
+      font-size: 16px;
+      padding-bottom: 12px;
+      gap: 6px;
+    }
+
+    &__copyright {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .footer {
+    &__top {
+      padding-block: 30px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    &__logo {
+      height: 50px;
+    }
+
+    &__menu {
+      padding-top: 30px;
+      border-top: var(--base-border);
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    &__menu-item {
+      font-size: 16px;
+    }
+
+    &__social {
+      padding: 16px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px 10px;
+      justify-self: end;
+    }
+
+    &__social-caption {
+      font-size: 16px;
+      text-align: center;
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &__social-link {
+      padding: 16px;
+
+      svg {
+        width: 20px;
+      }
+    }
+
+    &__bottom {
+      border: none;
+      padding-block: 30px;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    &__contacts {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    &__contacts-link {
+      font-size: 18px;
+      padding-block: 20px;
+      border-bottom: var(--base-border);
+      justify-content: center;
+      gap: 10px;
+    }
+
+    &__copyright {
+      text-align: center;
+    }
   }
 }

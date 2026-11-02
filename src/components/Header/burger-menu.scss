@@ -1,0 +1,61 @@
+.burger-menu {
+  --transition-duration: 0.2s;
+  width: 40px;
+  aspect-ratio: 1 / 1;
+  padding: 10px;
+  background-color: var(--green-50);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.bar {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: var(--grey-15);
+  transition: all 0ms var(--transition-duration);
+  flex-shrink: 0;
+
+  &:after,
+  &:before {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    left: 0;
+    background: var(--grey-15);
+    transition:
+      bottom var(--transition-duration) var(--transition-duration) cubic-bezier(0.23, 1, 0.32, 1),
+      transform var(--transition-duration) cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  &.animate {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  &:before {
+    bottom: 6px;
+  }
+
+  &:after {
+    top: 6px;
+  }
+
+  &.animate:after {
+    top: 0;
+    transform: rotate(45deg);
+    transition:
+      top var(--transition-duration) cubic-bezier(0.23, 1, 0.32, 1),
+      transform var(--transition-duration) var(--transition-duration) cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  &.animate:before {
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition:
+      bottom var(--transition-duration) cubic-bezier(0.23, 1, 0.32, 1),
+      transform var(--transition-duration) var(--transition-duration) cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
