@@ -4,6 +4,8 @@ import data from '@/data/services.json';
 import './ServicesPage.scss';
 import type { Block } from '@/types/services';
 import { create_image_map } from '@/utils/create_image_map';
+import { PromoSection } from '@/components/PromoSection/PromoSection';
+import { TitleBlock } from '@/components/TitleBlock/TitleBlock';
 
 const icons = import.meta.glob<string>('/src/assets/images/services/*.svg', {
   eager: true,
@@ -18,7 +20,7 @@ const icon_map = create_image_map(icons);
 export function ServicesPage() {
   return (
     <>
-      <section className="services__top">
+      <section>
         <TopBlock
           title="Our Services"
           description="Transform your brand with our innovative digital solutions that captivate and engage your audience."
@@ -30,11 +32,7 @@ export function ServicesPage() {
         <div className="wrapper">
           {ts_data.map((block) => (
             <div className="services__block" key={block.id}>
-              <div className="services__title-block">
-                <h2 className="h2">{block.title}</h2>
-                <p className="services__desc">{block.desc}</p>
-                <p className="services__note">{block.note}</p>
-              </div>
+              <TitleBlock title={block.title} desc={block.desc} note={block.note} />
 
               <ul className="services__categories">
                 {block.lists.map((list) => (
@@ -57,6 +55,11 @@ export function ServicesPage() {
           ))}
         </div>
       </section>
+
+      <PromoSection
+        title="Let us Bring your Ideas to Life in the Digital World."
+        description="No matter which services you choose, we are committed to delivering exceptional results that exceed your expectations. Our multidisciplinary team works closely together to ensure seamless collaboration and a unified vision for your digital product."
+      />
     </>
   );
 }
