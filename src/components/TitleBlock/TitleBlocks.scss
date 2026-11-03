@@ -4,6 +4,10 @@
   padding: 120px 50px 50px;
   border-top: var(--base-border);
 
+  .h2 {
+    text-align: start;
+  }
+
   &__desc {
     max-width: 1196px;
     font-weight: 400;

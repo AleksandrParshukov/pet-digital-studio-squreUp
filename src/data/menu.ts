@@ -13,8 +13,8 @@ export const menu: Menu[] = [
     path: "/services"
   },
   {
-    title: "Work",
-    path: "/work"
+    title: "Works",
+    path: "/works"
   },
   {
     title: "Process",

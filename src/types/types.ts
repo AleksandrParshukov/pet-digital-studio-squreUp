@@ -31,3 +31,12 @@ export interface FAQ {
   question: string;
   answer: string;
 }
+
+export interface Works {
+  id: string;
+  caption: string;
+  image: string;
+  name: string;
+  link: string;
+  desc: string;
+}
