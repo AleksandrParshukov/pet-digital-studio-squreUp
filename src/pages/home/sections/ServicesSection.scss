@@ -20,11 +20,13 @@
   &__icon {
     width: max-content;
     aspect-ratio: 1;
-    background:
-      linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%),
-      linear-gradient(229.29deg, rgba(158, 255, 0, 0.8) -68.25%, rgba(158, 255, 0, 0) 32.16%);
     padding: 24px;
     margin-bottom: 40px;
+    background:
+      linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%) padding-box,
+      linear-gradient(229.29deg, rgba(158, 255, 0, 0.8) -68.25%, rgba(158, 255, 0, 0) 32.16%) padding-box,
+      linear-gradient(180deg, #2e2e2e 0%, transparent 100%) border-box;
+    border: 1px solid transparent;
     border-radius: 10px;
 
     img {

@@ -1,0 +1,260 @@
+[
+  {
+    "id": "service_1",
+    "title": "Design",
+    "desc": "At Squareup, our design team is passionate about creating stunning, user-centric designs that captivate your audience and elevate your brand. We believe that great design is not just about aesthetics; it's about creating seamless and intuitive user experiences. ",
+    "note": "Our design services include:",
+    "lists": [
+      {
+        "id": "service_1_ux",
+        "caption": "User Experience (UX) Design",
+        "items": [
+          {
+            "id": "service_1_ux_1",
+            "icon": "icon-1.svg",
+            "text": "User Research and Persona Development"
+          },
+          {
+            "id": "service_1_ux_2",
+            "icon": "icon-2.svg",
+            "text": "Information Architecture and Wireframing"
+          },
+          {
+            "id": "service_1_ux_3",
+            "icon": "icon-3.svg",
+            "text": "Interactive Prototyping and User Testing"
+          },
+          {
+            "id": "service_1_ux_4",
+            "icon": "icon-4.svg",
+            "text": "UI Design and Visual Branding"
+          }
+        ]
+      },
+      {
+        "id": "service_1_ui",
+        "caption": "User Interface (UI) Design",
+        "items": [
+          {
+            "id": "service_1_ui_1",
+            "icon": "icon-5.svg",
+            "text": "Intuitive and Visually Appealing Interface Design"
+          },
+          {
+            "id": "service_1_ui_2",
+            "icon": "icon-6.svg",
+            "text": "Custom Iconography and Illustration"
+          },
+          {
+            "id": "service_1_ui_3",
+            "icon": "icon-7.svg",
+            "text": "Typography and Color Palette Selection"
+          },
+          {
+            "id": "service_1_ui_4",
+            "icon": "icon-8.svg",
+            "text": "Responsive Design for Various Devices"
+          }
+        ]
+      },
+      {
+        "id": "service_1_branding",
+        "caption": "Branding and Identity",
+        "items": [
+          {
+            "id": "service_1_branding_1",
+            "icon": "icon-9.svg",
+            "text": "Logo Design and Visual Identity Development"
+          },
+          {
+            "id": "service_1_branding_2",
+            "icon": "icon-10.svg",
+            "text": "Brand Strategy and Positioning"
+          },
+          {
+            "id": "service_1_branding_3",
+            "icon": "icon-11.svg",
+            "text": "Brand Guidelines and Style Guides"
+          },
+          {
+            "id": "service_1_branding_4",
+            "icon": "icon-12.svg",
+            "text": "Marketing Collateral Design (Brochures, Business Cards, etc.)"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "service_2",
+    "title": "Engineering",
+    "desc": "Our engineering team combines technical expertise with a passion for innovation to build robust and scalable digital solutions. We leverage the latest technologies and best practices to deliver high-performance applications tailored to your specific needs.",
+    "note": "Our engineering services include:",
+    "lists": [
+      {
+        "id": "service_2_web",
+        "caption": "Web Development",
+        "items": [
+          {
+            "id": "service_2_web_1",
+            "icon": "icon-13.svg",
+            "text": "Front-End Development (HTML, CSS, JavaScript)"
+          },
+          {
+            "id": "service_2_web_2",
+            "icon": "icon-14.svg",
+            "text": "Back-End Development (PHP, Python, Ruby)"
+          },
+          {
+            "id": "service_2_web_3",
+            "icon": "icon-15.svg",
+            "text": "Content Management System (CMS) Development (WordPress, Drupal)"
+          },
+          {
+            "id": "service_2_web_4",
+            "icon": "icon-16.svg",
+            "text": "E-Commerce Platform Development (Magento, Shopify)"
+          }
+        ]
+      },
+      {
+        "id": "service_2_mobile",
+        "caption": "Mobile App Development",
+        "items": [
+          {
+            "id": "service_2_mobile_1",
+            "icon": "icon-17.svg",
+            "text": "Native iOS and Android App Development"
+          },
+          {
+            "id": "service_2_mobile_2",
+            "icon": "icon-18.svg",
+            "text": "Cross-Platform App Development (React Native, Flutter)"
+          },
+          {
+            "id": "service_2_mobile_3",
+            "icon": "icon-19.svg",
+            "text": "App Prototyping and UI/UX Design Integration"
+          },
+          {
+            "id": "service_2_mobile_4",
+            "icon": "icon-20.svg",
+            "text": "App Testing, Deployment, and Maintenance"
+          }
+        ]
+      },
+      {
+        "id": "service_2_software",
+        "caption": "Custom Software Development",
+        "items": [
+          {
+            "id": "service_2_software_1",
+            "icon": "icon-21.svg",
+            "text": "Enterprise Software Development"
+          },
+          {
+            "id": "service_2_software_2",
+            "icon": "icon-22.svg",
+            "text": "Custom Web Application Development"
+          },
+          {
+            "id": "service_2_software_3",
+            "icon": "icon-23.svg",
+            "text": "Integration with Third-Party APIs and Systems"
+          },
+          {
+            "id": "service_2_software_4",
+            "icon": "icon-24.svg",
+            "text": "Legacy System Modernization and Migration"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "service_3",
+    "title": "Project Management",
+    "desc": "Our experienced project management team ensures that your projects are delivered on time, within budget, and according to your specifications. We follow industry-standard methodologies and employ effective communication and collaboration tools to keep you informed throughout the development process.",
+    "note": "Our project management services include:",
+    "lists": [
+      {
+        "id": "service_3_planning",
+        "caption": "Project Planning and Scoping",
+        "items": [
+          {
+            "id": "service_3_planning_1",
+            "icon": "icon-25.svg",
+            "text": "Requirements Gathering and Analysis"
+          },
+          {
+            "id": "service_3_planning_2",
+            "icon": "icon-26.svg",
+            "text": "Project Roadmap and Timeline Development"
+          },
+          {
+            "id": "service_3_planning_3",
+            "icon": "icon-27.svg",
+            "text": "Resource Allocation and Task Assignment"
+          },
+          {
+            "id": "service_3_planning_4",
+            "icon": "icon-28.svg",
+            "text": "Risk Assessment and Mitigation Strategies"
+          }
+        ]
+      },
+      {
+        "id": "service_3_agile",
+        "caption": "Agile Development",
+        "items": [
+          {
+            "id": "service_3_agile_1",
+            "icon": "icon-29.svg",
+            "text": "Iterative Development and Sprints"
+          },
+          {
+            "id": "service_3_agile_2",
+            "icon": "icon-30.svg",
+            "text": "Scrum or Kanban Methodology Implementation"
+          },
+          {
+            "id": "service_3_agile_3",
+            "icon": "icon-31.svg",
+            "text": "Regular Progress Updates and Demos"
+          },
+          {
+            "id": "service_3_agile_4",
+            "icon": "icon-32.svg",
+            "text": "Continuous Improvement and Feedback Incorporation"
+          }
+        ]
+      },
+      {
+        "id": "service_3_agile_qat",
+        "caption": "Quality Assurance and Testing",
+        "items": [
+          {
+            "id": "service_3_qat_1",
+            "icon": "icon-33.svg",
+            "text": "Test Planning and Execution"
+          },
+          {
+            "id": "service_3_qat_2",
+            "icon": "icon-34.svg",
+            "text": "Functional and Usability Testing"
+          },
+          {
+            "id": "service_3_qat_3",
+            "icon": "icon-35.svg",
+            "text": "Performance and Security Testing"
+          },
+          {
+            "id": "service_3_qat_4",
+            "icon": "icon-36.svg",
+            "text": "Bug Tracking and Issue Resolution"
+          }
+        ]
+      }
+    ]
+  }
+]

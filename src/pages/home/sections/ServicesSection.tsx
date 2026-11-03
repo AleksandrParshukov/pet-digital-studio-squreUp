@@ -7,7 +7,6 @@ import { create_image_map } from '@/utils/create_image_map';
 
 const logos = import.meta.glob<string>('/src/assets/images/idx-services/*.svg', {
   eager: true,
-  query: '?url',
   import: 'default',
 });
 
