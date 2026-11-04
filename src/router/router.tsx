@@ -4,6 +4,7 @@ import { HomePage } from '../pages/home/HomePage';
 import { AboutPage } from '../pages/about/AboutPage';
 import { ServicesPage } from '@/pages/services/ServicesPage';
 import { WorksPage } from '@/pages/works/WorksPage';
+import { ProcessPage } from '@/pages/process/ProcessPage';
 
 export const router_config = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ export const router_config = createBrowserRouter([
       {
         path: 'works',
         element: <WorksPage />,
+      },
+      {
+        path: 'process',
+        element: <ProcessPage />,
       },
       {
         path: 'about',

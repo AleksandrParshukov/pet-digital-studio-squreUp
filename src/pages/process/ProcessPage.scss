@@ -1,0 +1,110 @@
+@use '@/assets/scss/breakpoints.scss' as *;
+
+.process {
+  &__list {
+    border-top: var(--base-border);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  &__item {
+    counter-increment: step;
+    padding: 100px 50px;
+    border-bottom: var(--base-border);
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 50px 14px;
+
+    &::before {
+      content: counter(step, decimal-leading-zero);
+      font-family: 'Barlow', sans-serif;
+      font-weight: 600;
+      font-size: 150px;
+      line-height: 1;
+      color: var(--green-80);
+      text-box: trim-both cap alphabetic;
+    }
+
+    &:nth-child(2n + 1) {
+      border-right: var(--base-border);
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--grey-60);
+    height: min-content;
+    padding-bottom: 26px;
+    padding-left: 10px;
+    border-bottom: var(--base-border);
+    align-self: end;
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--grey-60);
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: $lg) {
+  .process {
+    &__item {
+      counter-increment: step;
+      padding: 80px 40px;
+      gap: 40px 14px;
+
+      &::before {
+        font-size: 120px;
+      }
+    }
+
+    &__name {
+      font-size: 24px;
+      padding-bottom: 20px;
+    }
+
+    &__desc {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .process {
+    &__list {
+      border-top: var(--base-border);
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    &__item {
+      padding: 40px 24px;
+      gap: 30px 10px;
+
+      &::before {
+        font-size: 80px;
+      }
+    }
+
+    &__name {
+      font-size: 20px;
+      padding-bottom: 14px;
+    }
+
+    &__desc {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .process {
+    &__list {
+      grid-template-columns: 100%;
+    }
+  }
+}

@@ -40,3 +40,9 @@ export interface Works {
   link: string;
   desc: string;
 }
+
+export interface Process {
+  id: string;
+  name: string;
+  desc: string;
+}
