@@ -25,6 +25,7 @@ export function ServicesPage() {
           title="Our Services"
           description="Transform your brand with our innovative digital solutions that captivate and engage your audience."
           background={top_bg}
+          is_title={true}
         />
       </section>
 

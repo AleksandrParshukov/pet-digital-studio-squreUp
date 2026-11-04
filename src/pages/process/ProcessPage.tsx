@@ -17,6 +17,7 @@ export function ProcessPage() {
           title="Process of Starting the Project"
           description="At SquareUp, we value transparency, collaboration, and delivering exceptional results."
           background={top_bg}
+          is_title={true}
         />
       </section>
 

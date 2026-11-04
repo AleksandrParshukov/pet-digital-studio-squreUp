@@ -25,6 +25,7 @@ export function WorksPage() {
           title="Our Works"
           description="Discover a portfolio of visually stunning and strategically crafted digital projects that showcase our creativity and expertise."
           background={top_bg}
+          is_title={true}
         />
       </section>
 
