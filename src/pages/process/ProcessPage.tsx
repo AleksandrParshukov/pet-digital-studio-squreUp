@@ -1,11 +1,11 @@
 import TopBlock from '@/components/TopBlock/TopBlock';
 import top_bg from '@/assets/images/faq-top-bg.png';
 import data from '@/data/process.json';
-import './ProcessPage.scss';
 import type { Process } from '@/types/types';
 import { TitleBlock } from '@/components/TitleBlock/TitleBlock';
 import { PromoSection } from '@/components/PromoSection/PromoSection';
 import { CallbackSection } from '@/components/CallbackSection/CallbackSection';
+import { ProcessList } from '@/components/ProcessList/ProcessList';
 
 const ts_data: Process[] = data;
 
@@ -29,14 +29,7 @@ export function ProcessPage() {
             note="Here's an overview of our typical process:"
           />
 
-          <ol className="process__list">
-            {ts_data.map((item) => (
-              <li className="process__item" key={item.id}>
-                <p className="process__name">{item.name}</p>
-                <p className="process__desc">{item.desc}</p>
-              </li>
-            ))}
-          </ol>
+          <ProcessList data={ts_data} />
         </div>
       </section>
 

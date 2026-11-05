@@ -1,0 +1,150 @@
+@use '@/assets/scss/breakpoints.scss' as *;
+
+.invite {
+  .wrapper {
+    padding: 80px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px 40px;
+  }
+
+  &__icon {
+    width: 150px;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+  }
+
+  &__caption {
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--grey-60);
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--grey-60);
+  }
+
+  &__bottom {
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--grey-60);
+    text-align: center;
+    width: 100%;
+    padding: 24px 40px;
+    backdrop-filter: blur(12px);
+    background: rgba(36, 36, 36, 0.2);
+    border: var(--base-border);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    .btn {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  &__slogan {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: var(--absolute-white);
+    padding: 14px 20px;
+    background-color: var(--grey-15);
+    border-radius: 8px;
+  }
+}
+
+@media (max-width: $lg) {
+  .invite {
+    .wrapper {
+      padding: 60px;
+      gap: 40px 30px;
+    }
+
+    &__icon {
+      width: 100px;
+    }
+
+    &__desc {
+      gap: 16px;
+    }
+
+    &__caption {
+      font-size: 24px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+    &__bottom {
+      font-size: 16px;
+      padding: 20px 30px;
+      border-radius: 10px;
+      gap: 16px;
+    }
+
+    &__slogan {
+      font-size: 16px;
+      padding: 10px 14px;
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .invite {
+    .wrapper {
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    &__icon {
+      width: 80px;
+    }
+
+    &__desc {
+      text-align: center;
+      margin-block: 24px 30px;
+      gap: 10px;
+    }
+
+    &__caption {
+      font-size: 20px;
+    }
+
+    &__text {
+      font-size: 14px;
+    }
+
+    &__bottom {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      grid-column: span 2;
+
+      .btn {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+  }
+}
