@@ -1,0 +1,121 @@
+@use '@/assets/scss/breakpoints.scss' as *;
+
+.benefits {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    padding: 100px 50px;
+    border-top: var(--base-border);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex: 1 1 40%;
+
+    &:nth-child(2n + 1) {
+      border-right: var(--base-border);
+    }
+  }
+
+  &__caption {
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.5;
+    color: var(--green-80);
+    padding-bottom: 50px;
+    border-bottom: var(--base-border);
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--grey-60);
+  }
+}
+
+.careers {
+  &__cats {
+    border-top: var(--base-border);
+  }
+
+  &__cat-name {
+    font-weight: 500;
+    font-size: 28px;
+    color: var(--grey-60);
+    padding: 50px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex: 1 1 30%;
+  }
+}
+
+@media (max-width: $lg) {
+  .benefits {
+    &__item {
+      padding: 80px 40px;
+      gap: 40px;
+    }
+
+    &__caption {
+      font-size: 32px;
+      padding-bottom: 40px;
+    }
+
+    &__desc {
+      font-size: 16px;
+    }
+  }
+
+  .careers {
+    &__cat-name {
+      font-size: 22px;
+      padding: 40px;
+    }
+  }
+}
+
+@media (max-width: $ssm) {
+  .benefits {
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      padding: 40px 24px;
+      gap: 20px;
+
+      &:nth-child(2n + 1) {
+        border-right: none;
+      }
+    }
+
+    &__caption {
+      font-size: 26px;
+      padding-bottom: 20px;
+    }
+
+    &__desc {
+      font-size: 14px;
+    }
+  }
+
+  .careers {
+    &__cat-name {
+      font-size: 20px;
+      padding: 40px 16px;
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+  }
+}

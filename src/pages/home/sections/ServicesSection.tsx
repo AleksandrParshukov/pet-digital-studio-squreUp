@@ -4,15 +4,17 @@ import data from '@/data/idx-services.json';
 import './ServicesSection.scss';
 import type { Service } from '@/types/types';
 import { create_image_map } from '@/utils/create_image_map';
+import { Card } from '@/components/Card/Card';
 
-const logos = import.meta.glob<string>('/src/assets/images/idx-services/*.svg', {
+const icons = import.meta.glob<string>('/src/assets/images/idx-services/*.svg', {
   eager: true,
   import: 'default',
-});
+})
+
+const icon_map = create_image_map(icons);
 
 const ts_data: Service[] = data;
 
-const icon_map = create_image_map(logos);
 
 export function ServicesSection() {
   return (
@@ -26,16 +28,7 @@ export function ServicesSection() {
       <div className="wrapper">
         <ul className="idx-services__list">
           {ts_data.map((item) => (
-            <li className="idx-services__item" key={item.id}>
-              <div className="idx-services__icon">
-                <img src={icon_map[item.icon]} alt="" />
-              </div>
-              <p className="idx-services__name">{item.name}</p>
-              <p className="idx-services__desc">{item.desc}</p>
-              <a href="#" className="idx-services__link btn btn-secondary">
-                Learn More
-              </a>
-            </li>
+            <Card id={item.id} icon={icon_map[item.icon]} name={item.name} desc={item.desc} btn_text='Learn More' />
           ))}
         </ul>
       </div>

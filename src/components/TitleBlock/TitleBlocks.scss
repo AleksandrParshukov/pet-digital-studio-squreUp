@@ -15,7 +15,7 @@
     line-height: 1.5;
     letter-spacing: -0.01em;
     color: var(--grey-90);
-    margin-block: 14px 50px;
+    margin-top: 14px;
   }
 
   &__note {
@@ -24,6 +24,7 @@
     color: var(--absolute-white);
     width: fit-content;
     padding: 12px 14px;
+    margin-top: 50px;
     background-color: var(--grey-15);
     border-radius: 8px;
     display: block;

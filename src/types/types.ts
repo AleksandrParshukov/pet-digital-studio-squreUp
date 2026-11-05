@@ -5,7 +5,7 @@ export interface Client {
 }
 
 export interface Service {
-  id: number;
+  id: string;
   icon: string;
   name: string;
   desc: string;

@@ -3,7 +3,7 @@ import './TitleBlocks.scss';
 interface TitleBlockProps {
   title: string;
   desc: string;
-  note: string;
+  note?: string;
 }
 
 export function TitleBlock({ title, desc, note }: TitleBlockProps) {
@@ -11,7 +11,7 @@ export function TitleBlock({ title, desc, note }: TitleBlockProps) {
     <div className="title-block">
       <h2 className="h2">{title}</h2>
       <p className="title-block__desc">{desc}</p>
-      <p className="title-block__note">{note}</p>
+      {note && <p className="title-block__note">{note}</p>}
     </div>
   );
 }
