@@ -134,14 +134,14 @@ export function Header() {
             ))}
           </ul>
 
-          <button className="header__callback btn btn-primary to-ssm" type="button">
+          <a className="header__callback btn btn-primary to-ssm" href="#">
             Contact Us
-          </button>
+          </a>
         </nav>
 
-        <button className="header__callback btn btn-primary from-ssm" type="button">
+        <a className="header__callback btn btn-primary from-ssm" href="#">
           Contact Us
-        </button>
+        </a>
       </div>
     </header>
   );

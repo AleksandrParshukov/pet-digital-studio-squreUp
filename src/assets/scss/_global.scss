@@ -136,6 +136,20 @@ label[for]:not([for='']) {
   margin-top: 1em;
 }
 
+.page-transition {
+  animation: page_fade_in 0.3s ease both;
+}
+
+@keyframes page_fade_in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @media (max-width: $lg) {
   :root {
     --header-height: 85px;

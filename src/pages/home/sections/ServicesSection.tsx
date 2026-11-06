@@ -28,7 +28,12 @@ export function ServicesSection() {
       <div className="wrapper">
         <ul className="idx-services__list">
           {ts_data.map((item) => (
-            <Card id={item.id} icon={icon_map[item.icon]} name={item.name} desc={item.desc} btn_text='Learn More' />
+            <Card 
+            id={item.id} 
+            icon={icon_map[item.icon]} 
+            name={item.name} 
+            desc={item.desc} 
+            btn_text='Learn More' />
           ))}
         </ul>
       </div>

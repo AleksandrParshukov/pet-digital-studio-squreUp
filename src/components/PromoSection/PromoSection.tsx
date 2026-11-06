@@ -15,9 +15,9 @@ export function PromoSection({ title, description }: PromoSectionProps) {
         <h2 className="h2">{title}</h2>
         <p className="promo__desc">{description}</p>
 
-        <button className="btn btn-primary" type="button">
+        <a className="btn btn-primary" href="#">
           Start Project
-        </button>
+        </a>
       </div>
     </section>
   );
